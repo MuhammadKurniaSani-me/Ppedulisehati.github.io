@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/vaccine_registration.css">
+    <script src="../javascripts/hamburger_menu.js" defer></script>
+    <script src="../javascripts/vaccine_form_validation.js" defer></script>
+    <title>Pendaftaran Vaksin</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><img src="../images/icons/logo.svg" alt="Logo"></div>
+            <a class="toggle-button" href="#">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="#" class="nav-link">Tentang</a></li>
+                    <li><a href="#" class="nav-link">Kontak</a></li>
+                    <li><a href="./sign_in.html" class="nav-link">Masuk</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="hero">
+            <section class="heading">
+                <h1>
+                    Ayo! Bangun Lingkungan Keluarga yang Kuat <br> Melawan Pandemi Virus Korona.
+                </h1>
+            </section>
+            <section class="subheading">
+                <a class="registration_link" href="#">Daftar Vaksin!</a>
+            </section>
+        </div>
+
+        <!-- formulir -->
+        <section class="main-form">
+            <h1 class="hidden"></h1>
+            <div class="form-container">
+                <form action="halaman_Data_Terkirim.html" method="POST" name="Formulir_Pendaftaran" onsubmit="return validasiFormulirPendaftaran();">
+
+                    <!-- bidang nama tim -->
+                    <div class="form-data name_container">
+                        <!-- judul data-input bidang -->
+                        <div class="label">
+                            <h4>
+                                <label for="namaTim">Nama</label>
+                            </h4>
+                        </div>
+                        <div class="data-input">
+                            <input type="text" name="namaTim" id="namaTim" onkeypress="checkNameTim();" placeholder="Nama Lengkap">
+
+                            <!-- peringatan -->
+                            <div class="data-validation">
+                                <!-- peringatan pertama jika data-input nama kosong -->
+                                <div class="empty-cheker" id="namaTimKosong">Nama tidak boleh kosong</div>
+
+                                <!-- peringatan kedua jika jumlah digit karakter kurang -->
+                                <div class="invalid-cheker " id="namaTimSalah">Panjang minimal 4 huruf </div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <!-- bidang gender tim -->
+                    <div class="form-data gender">
+                        <!-- judul data-input bidang -->
+                        <div class="label">
+                            <h4>
+                                Jenis Kelamin
+                            </h4>
+                        </div>
+                        <div class="data-input">
+                            <div>
+                                <!-- radio button untuk laki-laki -->
+                                <p><label for="genderTimMale">Laki-Laki</label></p>
+                                <span><input type="radio" name="genderTim" id="genderTimMale" value="genderTimIsMale" onclick="checkGenderTim();"></span>
+                                
+                                <!-- radio button untuk perempuan -->
+                                <p><label for="genderTimFemale">Perempuan</label></p>
+                                <span><input type="radio" name="genderTim" id="genderTimFemale" value="genderTimIsFemale" onclick="checkGenderTim();"></span>
+
+                                <!-- peringatan jika bidang data-input kosong -->
+                                <div class="data-validation" id="genderTimKosong">Gender tidak boleh kosong</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- bidang nomor telepon tim -->
+                    <div class="form-data no_Telepon_Tim">
+                        <!-- judul data-input bidang -->
+                        <div class="label">
+                            <h4>
+                                <label for="noTeleponTim">Nomor Telepon</label>
+                            </h4>
+                        </div>
+                        <div class="data-input">
+                            <input type="text" name="noTeleponTim" id="noTeleponTim" placeholder="(+62)-XXX-XXXX-XXXX" onkeypress="checkNomorTeleponTim();">
+                            
+                            <!-- peringatan -->
+                            <div class="data-validation">
+                                <!-- peringatan pertama jika bidang data-input kosong -->
+                                <div class="empty-cheker" id="noTeleponTimKosong">Nomor telepon tim tidak boleh kosong</div>
+
+                                <!-- peringatan kedua jika bidang data-input nomor telpon berupa huruf -->
+                                <div class="invalid-cheker" id="noTeleponTimAdaHuruf">Terdapat huruf pada nomor telepon</div>
+
+                                <!-- peringatan ketiga jika jumlah digit angka bidang data-input nomor kurang -->
+                                <div class="invalid-digit-cheker" id="noTeleponTimTidakValid">Panjang karakter antara 7-13 digit</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- bidang alamat e-mail tim -->
+                    <!-- judul data-input bidang -->
+                    <div class="form-data email_Tim">
+                        <div class="label">
+                            <h4>
+                                <label for="emailTim">Email</label>
+                            </h4>
+                        </div>
+                        <div class="data-input">
+                            <input type="text" name="emailTim" id="emailTim" placeholder="nama@mail.com" onkeypress="checkEmailTim();">
+
+                            <!-- peringatan -->
+                            <div class="data-validation">
+                                <!-- peringatan pertama jika bidang data-input email kosong -->
+                                <div class="empty-cheker" id="emailTimKosong">Alamat E-mail tidak boleh kosong</div>
+
+                                <!-- peringatan kedua jika format penulian email salah -->
+                                <div class="invalid-cheker" id="formatEmailSalah">Format penulisan E-mail tidak valid</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- tanggal pendaftaran -->
+                    <div class="form-data tanggal_Pendaftaran_Tim">
+                        <!-- judul data-input bidang -->
+                        <div class="label">
+                            <h4>
+                                <label for="tanggalDaftarTim">Tanggal Mendaftar <i>(tanggal hari ini)</i></label>
+                            </h4>
+                        </div>
+                        <div class="data-input">
+                            <input type="text" name="tanggalDaftarTim" id="tanggalDaftarTim" placeholder="hh/bb/tt" onkeypress="checkTanggalPendaftaran();">
+
+                            <!-- peringatan -->
+                            <div class="data-validation">
+                                <!-- peringatan pertama jika bidang data-input tanggal kosong -->
+                                <div class="empty-cheker" id="tanggalDaftarTimKosong">Tanggal pendaftaran tidak boleh kosong</div>
+
+                                <!-- peringatan kedua jika bidang format penulisan tanggal salah -->
+                                <div class="invalid-cheker" id="tanggalDaftarTimSalah">Penulisan tanggal pendaftaran salah</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- data alamat universitas/instansi tim -->
+                    <div class="form-data alamat_Instansi_Tim">
+                        <!-- judul data-input bidang -->
+                        <div class="label">
+                            <h4>
+                                <label for="alamatInstansiTim">Alamat Domisili</label>
+                            </h4>
+                        </div>
+                        <div class="data-input">
+                            <div class="kontainer_Alamat_TextArea">
+                                <textarea name="alamatInstansiTim" id="alamatInstansiTim" cols="40" rows="3" onkeypress="checkAlamatInstansi();" placeholder="Alamat Lengkap"></textarea>
+                            </div>
+                            
+                            <!-- peringatan -->
+                            <div class="data-validation">
+                                <!-- peringatan pertama jika bidang data-input kosong -->
+                                <div class="empty-cheker" id="alamatInstansiTimKosong">Data alamat tidak boleh kosong</div>
+
+                                <!-- peringatan kedua jika bidang data-input kosong -->
+                                <div class="invalid-cheker" id="alamatInstansiTimSalah">Panjang karakter minimal 8 digit</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- check box pernyataan bersedia dengan aturan dan ketentuan -->
+                    <div class="form-data">
+                        <!-- judul data-input bidang -->
+                        <div class="label">
+                            <h4><label for="aturanDanKetentuan">Saya bersedia vaksin!</label></h4>
+                        </div>
+                        <div class="data-input">
+                            <div class="terms">
+                                <input type="checkbox" name="aturan_Dan_Ketentuan" id="aturanDanKetentuan" onchange="checkboxSyaratKetentuan();">
+                            </div>
+
+                            <!-- peringatan jika bidang checkbox kosong -->
+                            <div class="data-validation" id="checkBoxKetentuanKosong">Checkbox tidak boleh kosong</div>
+                        </div>
+                    </div>
+
+                    <!-- pengumpulan data formulir -->
+                    <div class="form-data">
+                        <div class="submit-container">
+                            <input type="submit" value="Daftar!" id="submit_Data">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                <img src="../images/icons/logo.svg" alt="Logo">
+                <p> &copy; 2021 Nama Web.All Right Reserved</p>
+            </div>
+            <div class="supports">
+                <p>Didukung Oleh</p>
+                <figure>
+                    <img src="../images/icons/united_nations.svg" alt="United Nations">
+                    <img src="../images/icons/world_health_organization.svg" alt="World Health Organization">
+                    <img src="../images/icons/kementrian_kesehatan_republik_Indonesia.svg" alt="Kementrian Kesehatan Republik Indonesia">
+                </figure>
+            </div>
+    
+        </div>
+    </footer>
+</body>
+</html>

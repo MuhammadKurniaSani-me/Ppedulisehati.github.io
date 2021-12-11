@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/index.css">
+    <script src="./javascripts/hamburger_menu.js" defer></script>
+    <script src="./javascripts/close_button.js" defer></script>
+    <script src="./javascripts/registration.js" defer></script>
+    <script src="./javascripts/sign_up_validation.js" defer></script>
+    <title>Beranda Web Vaksin</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><img src="./images/icons/logo.svg" alt="Logo"></div>
+            <a class="toggle-button" href="#">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a id="beranda" href="#" class="nav-link">Beranda</a></li>
+                    <li><a href="./html/about.html" class="nav-link">Tentang</a></li>
+                    <li><a href="#" class="nav-link">Kontak</a></li>
+                    <li><a href="./html/sign_in.html" class="nav-link">Masuk</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <section class="heading">
+                <h1>
+                    Ayo! Bangun Lingkungan Keluarga yang Kuat <br> Melawan Pandemi Virus Korona.
+                </h1>
+            </section>
+            <section class="subheading">
+                <a class="registration_link" href="#">Daftar Vaksin!</a>
+            </section>
+            <div class="registration-alert-container" id="window-alert">
+                <div class="registration-alert">
+                    <div id="close-button">
+                        <img src="./images/icons/close_button.svg" alt="Close">
+                    </div>
+                    <div class="title">
+                        <img src="#" alt="Logo">
+                    </div>
+                    <div class="message">
+                        <h1>Anda belum memiliki akun!</h1>
+                        <p>Buat akun untuk melakukan pendaftaran vaksin.</p>
+                    </div>
+                    <div class="agree-container">
+                        <a id="agree-registration" href="./html/sign_up.html">Daftar Sekarang!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="about-corona-virus">
+            <div class="container">
+                <h1>
+                    Pengenalan Pandemi Virus Korona
+                </h1>
+                <div class="content-container">
+                    <div class="definition-corona-virus content">
+                        <figure>
+                            <img src="./images/icons/Coronavirus.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Apa itu Virus Corona?</h2>
+                            </figcaption>
+                        </figure>
+                        <p class="main-content"></p>
+                        <article>
+                            <h2 class="title-content hidden"></h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="corona-viru-myths content">
+                        <figure>
+                            <img src="./images/icons/Warning.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Mitos Virus Corona</h2>
+                            </figcaption>
+                        </figure>
+                        <article>
+                            <h2 class="title-content hidden">Title</h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="solutions content">
+                        <figure>
+                            <img src="./images/icons/Protection.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Tips Pencegahan Virus Corona</h2>
+                            </figcaption>
+                        </figure>
+                        <article>
+                            <h2 class="title-content hidden">Title</h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-corona-virus-vaccine">
+            <div class="container">
+                <h1>
+                    Jenis Vaksin Virus Korona
+                </h1>
+                <div class="content-container">
+                    <div class="pfizer vaccine content">
+                        <figure>
+                            <img src="./images/icons/pfizer.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Vaksin Pfizer</h2>
+                            </figcaption>
+                        </figure>
+                        <p class="main-content"></p>
+                        <article>
+                            <h2 class="title-content hidden"></h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="moderna vaccine content">
+                        <figure>
+                            <img src="./images/icons/moderna.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Vaksin Moderna</h2>
+                            </figcaption>
+                        </figure>
+                        <article>
+                            <h2 class="title-content hidden">Title</h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="astrazeneca vaccine content">
+                        <figure>
+                            <img src="./images/icons/astrazeneca.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Vaksin Astrazeneca</h2>
+                            </figcaption>
+                        </figure>
+                        <article>
+                            <h2 class="title-content hidden">Title</h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="sinovac vaccine content">
+                        <figure>
+                            <img src="./images/icons/sinovac.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Vaksin Sinovac</h2>
+                            </figcaption>
+                        </figure>
+                        <article>
+                            <h2 class="title-content hidden">Title</h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="sputnik_v vaccine content">
+                        <figure>
+                            <img src="./images/icons/sputnik_v.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Vaksin Sputnik V</h2>
+                            </figcaption>
+                        </figure>
+                        <article>
+                            <h2 class="title-content hidden">Title</h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="jenssen vaccine content">
+                        <figure>
+                            <img src="./images/icons/janssen.svg" alt="Illustrations">
+                            <figcaption>
+                                <h2 class="title-content">Vaksin Janssen</h2>
+                            </figcaption>
+                        </figure>
+                        <article>
+                            <h2 class="title-content hidden">Title</h2>
+                            <p class="main-content">
+                                Lorem ipsum, dolor sit amet adipisicing elit. Maxime in tempora, ducimu dicta quae aliquam. <a class="card" href="#">See More!</a>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                <img src="./images/icons/logo.svg" alt="Logo">
+                <p> &copy; 2021 Nama Web.All Right Reserved</p>
+            </div>
+            <div class="supports">
+                <p>Didukung Oleh</p>
+                <figure>
+                    <img src="./images/icons/united_nations.svg" alt="United Nations">
+                    <img src="./images/icons/world_health_organization.svg" alt="World Health Organization">
+                    <img src="./images/icons/kementrian_kesehatan_republik_Indonesia.svg" alt="Kementrian Kesehatan Republik Indonesia">
+                </figure>
+            </div>
+    
+        </div>
+    </footer>
+
+</body>
+</html>

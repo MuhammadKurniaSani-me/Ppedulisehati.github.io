@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/sign_up.css" />
+    <!-- <script defer src="../javascript/validation_sign_in.js"></script> -->
+    <script src="../javascripts/sign_up_validation.js" defer></script>
+    <title>Sign-Up</title>
+</head>
+
+<body>
+    <header class="hidden"></header>
+
+    <main id="window-login">
+        <section class="illustration sections">
+            <h1>Sunbox</h1>
+            <p>A creative place to get an idea!</p>
+            <figure class="illustration-image-container">
+                <img id="illustration-image" src="../images/pictures/sign_in_and_up_illustration.svg" alt="">
+            </figure>
+        </section>
+
+        <section class="form sections">
+            <h1>Daftar!</h1>
+            <p>Sudah memiliki akun? <a id="sign-up" href="./sign_in.html">Masuk!</a></p>
+            <form class="forms-container" name="form_sign_in" action="./profile.html" method="POST" onsubmit="return validasiFormulirDaftarAkun();">
+                <div class="input-container">
+                    <!-- Username -->
+                    <div class="username-container">
+                        <div class="label-container">
+                            <h4>
+                                <label for="username">Nama</label>
+                            </h4>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" name="username" id="username" onkeypress="checkName()"; placeholder="Nama Lengkap" />
+
+                            <!-- peringatan -->
+                            <div class="validasi_data">
+                                <!-- peringatan pertama jika masukan nama kosong -->
+                                <div class="empty-cheker" id="emptyUsername">
+                                    <p>Username tidak boleh kosong</p>
+                                </div>
+
+                                <!-- peringatan kedua jika jumlah digit karakter kurang -->
+                                <div class="invalid-cheker" id="invalidUsername">
+                                    <p>Panjang karakter minimal 8 huruf</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="e-mail-container">
+                        <div class="label-container">
+                            <h4>
+                                <label for="email">E-Mail</label>
+                            </h4>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" name=email" id="email" onkeypress="checkEmail()"; placeholder="nama@mail.com" />
+
+                            <!-- peringatan -->
+                            <div class="validasi_data">
+                                <!-- peringatan pertama jika masukan nama kosong -->
+                                <div class="empty-cheker" id="emptyEmail">
+                                    <p>E-Mail tidak boleh kosong</p>
+                                </div>
+
+                                <!-- peringatan kedua jika jumlah digit karakter kurang -->
+                                <div class="invalid-cheker" id="invalidEmail">
+                                    <p>E-Mail tidak valid</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="password-container">
+                        <div class="label-container">
+                            <h4>
+                                <label for="password">Password</label>
+                            </h4>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" id="password"
+                                placeholder="Karakter dan Angka Acak" onkeypress="checkPassword()";/>
+
+                            <!-- peringatan -->
+                            <div class="validasi_data">
+                                <!-- peringatan pertama jika masukan nama kosong -->
+                                <div class="empty-cheker" id="emptyPassword">
+                                    <p>Password tidak boleh kosong</p>
+                                </div>
+
+                                <!-- peringatan kedua jika jumlah digit karakter kurang -->
+                                <div class="invalid-cheker" id="invalidPassword">
+                                    <p>Panjang karakter minimal 8 huruf</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comfirm Password -->
+                <div class="confirm-password-container">
+                    <div class="label-container">
+                        <h4>
+                            <label for="confirmPassword">Konfirmasi Password</label>
+                        </h4>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="confirmPassword" id="confirmPassword"
+                            placeholder="Karakter dan Angka Acak" onkeypress="checkConfirmPassword()";/>
+
+                        <!-- peringatan -->
+                        <div class="validasi_data">
+                            <!-- peringatan pertama jika masukan nama kosong -->
+                            <div class="empty-cheker" id="emptyConfirmPassword">
+                                <p>Konfirmasi Password tidak boleh kosong</p>
+                            </div>
+
+                            <!-- peringatan kedua jika jumlah digit karakter kurang -->
+                            <div class="invalid-cheker" id="invalidConfirmPassword">
+                                <p>Password tidak sama!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                
+            </div>
+
+                <div class="submit-button-container">
+                    <div class="create-account-box">
+                        <button id="create-account" type="submit">
+                            <p>Daftar!</p>
+                        </button>
+                    </div>
+                    <div class="google-login-box">
+                        <button id="google-login" type="button">
+                            <p>Daftar dengan Google!</p>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="hidden"></footer>
+</body>
+
+</html>

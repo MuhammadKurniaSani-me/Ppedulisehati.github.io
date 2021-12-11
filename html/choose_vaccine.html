@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/vaccine_datas.css">
+    <script src="../javascripts/hamburger_menu.js" defer></script>
+    <script src="../javascripts/vaccine_data.js" defer></script>
+    <title>Pilih Vaksin</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><img src="../images/icons/logo.svg" alt="Logo"></div>
+            <a class="toggle-button" href="#">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a id="beranda" href="#" class="nav-link">Beranda</a></li>
+                    <li><a href="../html/about.html" class="nav-link">Tentang</a></li>
+                    <li><a href="#" class="nav-link">Kontak</a></li>
+                    <li><a href="#" id="user-profile" class="nav-link">Profil</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="hero">
+            <section class="heading">
+                <h1>
+                    Ayo! Bangun Lingkungan Keluarga yang Kuat <br> Melawan Pandemi Virus Korona.
+                </h1>
+            </section>
+            <section class="subheading">
+                <a class="registration_link" href="#">Pilih Vaksin!</a>
+            </section>
+        </div>
+
+        <div class="container">
+            <form action="" method="post" id="search-container">
+                <div class="search-box">
+                    <label for="search">Cari</label>
+                    <input type="text" id="search" name="search" onkeyup="search_vaccine_name()" placeholder=". . . . .">
+                </div>
+                <div class="shorter-box">
+                    <label for="shorter">Berdasarkan</label>
+
+                    <select name="shorter" id="shorter">
+                        <!-- <option value="all">Semua</option> -->
+                        <option value="name">Jenis Vaksin</option>
+                        <option value="city">Kota</option>
+                        <option value="province">provinsi</option>
+                    </select> 
+                </div>
+            </form>
+            <ul id="list_datas">
+                <li class="data-box" id="card">
+                    <div class="data-vaccine">
+                        <div class="title">
+                            <figure>
+                                <img class="vaccine-images" src="../images/icons/moderna.svg" alt="Illustrations">
+                            </figure>
+                            <figcaption>
+                                <h2 class="title-content">Deskripsi Data Vaksin</h2>
+                            </figcaption>
+                        </div>
+                        <article class="vaccine_data">
+                            <p class="hidden" id="name"></p>
+                            <p id="province"></p>
+                            <p id="city"></p>
+                            <p id="date"></p>
+                            <p id="time"></p>
+                            <p id="place"></p>
+                        </article>
+                        <a class="choose" href="./vaccine_registration.html">Daftar!</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="empty">
+            <h1>Maaf, Data selebihnya tidak ada!</h1>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                <img src="../images/icons/logo.svg" alt="Logo">
+                <p> &copy; 2021 Nama Web.All Right Reserved</p>
+            </div>
+            <div class="supports">
+                <p>Didukung Oleh</p>
+                <figure>
+                    <img src="../images/icons/united_nations.svg" alt="United Nations">
+                    <img src="../images/icons/world_health_organization.svg" alt="World Health Organization">
+                    <img src="../images/icons/kementrian_kesehatan_republik_Indonesia.svg" alt="Kementrian Kesehatan Republik Indonesia">
+                </figure>
+            </div>
+    
+        </div>
+    </footer>
+</body>
+
+</html>
